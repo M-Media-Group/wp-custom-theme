@@ -123,7 +123,7 @@ if (!function_exists('m_media_custom_theme_woocommerce_wrapper_before')) {
     function m_media_custom_theme_woocommerce_wrapper_before()
     {
         ?>
-			<main id="primary" class="site-main container-fluid">
+			<main id="primary" class="site-main container">
 		<?php
 }
 }

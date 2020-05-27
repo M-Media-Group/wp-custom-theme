@@ -9,11 +9,13 @@
 6.0 Blocks - Widgets
 7.0 Blocks - Colors
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 1.0 Block Alignments
 --------------------------------------------------------------*/
 body .site-content {
 	overflow-x: hidden;
+
 	/* prevents side-scrolling caused by use of vw */
 }
 
@@ -63,6 +65,7 @@ body .site-content {
 2.0 General Block Styles
 --------------------------------------------------------------*/
 [class^="wp-block-"] figcaption {
+
 	/* Update to match theme's caption styles */
 }
 
@@ -73,14 +76,18 @@ body .site-content {
 /*--------------------------------------------------------------
 3.0 Blocks - Common Blocks
 --------------------------------------------------------------*/
+
 /* Paragraph */
 p.has-drop-cap:not(:focus)::first-letter {
 	font-size: 5em;
+
 	/* margin-top: 0.15em; -- adjust for better alignment */
 }
 
 /* Gallery */
+
 /* Quote */
+
 /* Audio */
 .wp-block-audio audio {
 	display: block;
@@ -95,6 +102,7 @@ p.has-drop-cap:not(:focus)::first-letter {
 .wp-block-cover.alignright,
 .wp-block-cover-image.alignright {
 	display: flex;
+
 	/* If the theme's align styles override this */
 }
 
@@ -104,18 +112,21 @@ p.has-drop-cap:not(:focus)::first-letter {
 .wp-block-cover .wp-block-cover-image-text,
 .wp-block-cover .wp-block-cover-text,
 .wp-block-cover h2 {
+
 	/* Font size */
 }
 
 /* File */
 .wp-block-file a.wp-block-file__button,
 .wp-block-file a.wp-block-file__button:visited {
+
 	/* Copy button styles */
 }
 
 .wp-block-file a.wp-block-file__button:hover,
 .wp-block-file a.wp-block-file__button:focus,
 .wp-block-file a.wp-block-file__button:active {
+
 	/* Copy button styles */
 }
 
@@ -127,6 +138,7 @@ p.has-drop-cap:not(:focus)::first-letter {
 /*--------------------------------------------------------------
 4.0 Blocks - Formatting
 --------------------------------------------------------------*/
+
 /* Verse */
 .wp-block-verse {
 	background: transparent;
@@ -136,15 +148,19 @@ p.has-drop-cap:not(:focus)::first-letter {
 }
 
 /* Pullquote */
+
 /* Table */
 .wp-block-table.alignfull {
 	width: 96vw;
+
 	/* Make sure table fits available space */
 }
 
 @media (min-width: XXXXpx) {
+
 	.wp-block-table.alignwide {
-		width: XXXXpx;
+		width: xxxxpx;
+
 		/* Similar to the above, but usually needs to be adjusted based on breakpoints */
 	}
 }
@@ -152,18 +168,22 @@ p.has-drop-cap:not(:focus)::first-letter {
 /*--------------------------------------------------------------
 5.0 Blocks - Layout Elements
 --------------------------------------------------------------*/
+
 /* Buttons */
 .wp-block-button__link {
+
 	/* Separate out background and color to make sure custom colours can override */
 }
 
 .wp-block-button__link.has-background:hover,
 .wp-block-button__link.has-background:focus,
 .wp-block-button__link.has-background:active {
+
 	/* Optionally change opacity on hover when background is overridden */
 }
 
 /* Separator */
+
 /* Media & Text */
 .wp-block-media-text *:last-child {
 	margin-bottom: 0;
@@ -172,6 +192,7 @@ p.has-drop-cap:not(:focus)::first-letter {
 /*--------------------------------------------------------------
 6.0 Blocks - Widgets
 --------------------------------------------------------------*/
+
 /* General Widget styles */
 .wp-block-categories.aligncenter,
 .wp-block-categories.aligncenter ul,
@@ -197,5 +218,3 @@ p.has-drop-cap:not(:focus)::first-letter {
 /*--------------------------------------------------------------
 7.0 Blocks - Colors
 --------------------------------------------------------------*/
-
-/*# sourceMappingURL=gutenberg-blocks.css.map */

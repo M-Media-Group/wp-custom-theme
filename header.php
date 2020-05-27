@@ -48,7 +48,12 @@ wp_nav_menu(array(
     'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
     'walker' => new WP_Bootstrap_Navwalker(),
 ));
-?>
+if (get_theme_mod('cta_link')) {
+
+    ?>
 <a class="btn btn-primary text-white d-none d-md-block" href="<?php echo get_theme_mod('cta_link', '/contact'); ?>" rel="home" ><?php echo get_theme_mod('cta_text', 'Contact us'); ?></a>
+<?php
+}
+?>
     </div>
 </nav>

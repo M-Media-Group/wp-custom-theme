@@ -59,6 +59,10 @@ if (!function_exists('m_media_custom_theme_setup')):
             'primary' => __('Primary Menu', 'm-media-custom-theme'),
         ));
 
+        register_nav_menus(array(
+            'social' => __('Social Media Menu', 'm-media-custom-theme'),
+        ));
+
         /*
          * Switch default core markup for search form, comment form, and comments
          * to output valid HTML5.
@@ -246,6 +250,13 @@ if (defined('JETPACK__VERSION')) {
 if (class_exists('WooCommerce')) {
     require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Load WooCommerce compatibility file.
+ */
+require get_template_directory() . '/inc/class-mmedia-svg-icons.php';
+
+require get_template_directory() . '/inc/navigation.php';
 
 /**
  * Register Custom Navigation Walker
