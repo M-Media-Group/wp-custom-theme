@@ -10,14 +10,19 @@
 ?>
 
 <article id="post-<?php the_ID();?>" <?php post_class();?>>
+    <?php if (get_theme_mod('show_headers', true)) {?>
 	<header class="entry-header bg-primary text-white row alignfull" style="min-height:300px; background-image: url('<?php echo get_the_post_thumbnail_url(); ?> ')">
 		<div class="col-sm align-self-center">
 		<?php the_title('<h1 class="entry-title text-center"><mark>', '</mark></h1>');?>
 		</div>
 	</header><!-- .entry-header -->
-
 	<div class="entry-content mt-5">
+
+<?php } else {
+    ?>
+    <div class="entry-content mt-0">
 		<?php
+}
 the_content();
 
 wp_link_pages(

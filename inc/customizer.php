@@ -71,6 +71,23 @@ function m_media_custom_theme_customize_register($wp_customize)
         )
     );
 
+    $setting_show_headers = $wp_customize->add_setting('show_headers', array(
+        'default' => true,
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'show_headers',
+            array(
+                'label' => __('Show page headers', 'm_media_custom_theme'),
+                'section' => 'header_image',
+                'settings' => $setting_show_headers->id,
+                'type' => 'checkbox',
+            )
+        )
+    );
+
     if (isset($wp_customize->selective_refresh)) {
         $wp_customize->selective_refresh->add_partial(
             'blogname',

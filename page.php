@@ -16,7 +16,6 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main container">
-
 		<?php
 while (have_posts()):
     the_post();
