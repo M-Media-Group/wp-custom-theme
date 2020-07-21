@@ -13,17 +13,24 @@ $categories_list = get_the_category_list(esc_html__(', ', 'm-media-custom-theme'
 ?>
 
 <article id="post-<?php the_ID();?>" <?php post_class();?>>
-	<header class="entry-header row bg-primary text-white alignfull">
-		<div class="col-sm-5 align-self-center" style="overflow: visible;z-index: 1;">
+
 		<?php
 if (is_singular()):
-    if ($categories_list) {
-        /* translators: 1: list of categories. */
-        printf('<div class="cat-links text-white mb-1 small">' . esc_html__('%1$s', 'm-media-custom-theme') . '</div>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-    }
-    the_title('<h1 class="entry-title mr-sm-n5"><mark>', '</mark></h1>');
+?>
+    <header class="entry-header row bg-primary text-white alignfull">
+        <div class="col-sm-5 align-self-center" style="overflow: visible;z-index: 1;">
+    <?php
+if ($categories_list) {
+    /* translators: 1: list of categories. */
+    printf('<div class="cat-links text-white mb-1 small">' . esc_html__('%1$s', 'm-media-custom-theme') . '</div>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+}
+the_title('<h1 class="entry-title mr-sm-n5"><mark>', '</mark></h1>');
 else:
-    the_title('<h2 class="entry-title"><a class="text-white" href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
+?>
+    <header class="entry-header row bg-primary text-white alignfull" style="cursor: pointer;" onclick="location.href='<?php echo esc_url(get_permalink()); ?>'">
+        <div class="col-sm-5 align-self-center" style="overflow: visible;z-index: 1;">
+    <?php
+the_title('<h2 class="entry-title"><a class="text-white" href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
 endif;
 
 if ('post' === get_post_type()):
